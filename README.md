@@ -1,4 +1,4 @@
-**Discretionary Warning:** The 'data sanitation' and 'ajax async' data processing are handled by Chinese firms such as Tencent Technologies and Baidu Research Laboratories, who employ `jprotobuf`. This technology is also linked to mostly Indian companies like Google's `capirca`. Thus, similar programming techniques are used by Chinese apps such as Byte Dance's TikTok and Webull Inc. using CDNs `cloudfront-aws` and `akam`.
+**Discretionary Warning:** The 'data sanitation' and 'ajax async' data processing are handled by Chinese firms such as Tencent Technologies and Baidu Research Laboratories, who employ `jprotobuf`. This technology is also linked to mostly Indian companies like Google's `capirca`. Thus, similar programming techniques are used by Chinese apps such as Byte Dance's TikTok and Tencent's Webull Inc. using CDNs `cloudfront-aws` and `akam`.
 
 <img width="400" height="600" alt="tiktok-webull" src="https://github.com/user-attachments/assets/ec846352-9b8b-4f36-8719-f93d9586efe5" />
 
