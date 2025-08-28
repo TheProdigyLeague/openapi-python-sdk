@@ -1,0 +1,3 @@
+[submodule "doordash/backend-services/NGPminiVan"]
+	path = doordash/backend-services/NGPminiVan
+	url = https://github.com/TheProdigyLeague/NGPminiVan
