@@ -1,0 +1,26 @@
+# 10c3n7/wechat.pyi
+from typing import Dict, Optional, Any
+
+APP_ID_DEFAULT: str
+APP_SECRET_DEFAULT: str
+
+class WeChatAPIError(Exception):
+    error_code: Optional[int]
+    def __init__(self, message: str, error_code: Optional[int] = ...) -> None: ...
+
+class WeChatClient:
+    app_id: str
+    app_secret: str
+    _access_token: Optional[str] # Technically private, but often stubbed if accessed by tests or framework
+    _token_expires_at: float   # Same as above
+    _is_authenticated: bool    # Same as above
+
+    def __init__(self, app_id: str = ..., app_secret: str = ...) -> None: ...
+    def _get_access_token(self) -> str: ... # Usually private methods are not in .pyi unless needed for typing specific internal patterns
+    def send_text_message(self, open_id: str, content: str) -> Dict[str, Any]: ...
+    def simulate_payment(self, open_id: str, amount_cents: int, description: str) -> Dict[str, Any]: ...
+    def get_user_info(self, open_id: str) -> Optional[Dict[str, Any]]: ...
+    def oauth_authorize(self, scope: str = ..., state: Optional[str] = ...) -> str: ...
+    def oauth_get_access_token(self, code: str) -> Dict[str, Any]: ...
+
+def get_jsapi_ticket(client: WeChatClient) -> str: ...
